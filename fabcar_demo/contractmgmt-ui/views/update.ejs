@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Blockchain POC</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/css/main.css">
+
+	<script type="text/javascript">
+		$(document).ready(() => {
+
+			$("#form").submit((event) => {
+				event.preventDefault();
+
+				$.ajax({
+					type: 'POST',
+					url: '/',
+					data: $('#form').serialize(),
+					dataType: "json",
+					success: (response) => {
+						$('#form')[0].reset();
+
+						document.getElementById("check").innerHTML = response.Success;
+						//ADD THIS CODE
+						setTimeout(() => {
+							document.getElementById("check").innerHTML = "";
+						}, 3000);
+						if (response.Success == "Success!") {
+							document.getElementById("aa").click();
+						};
+					},
+					error: () => {
+					}
+				})
+			});
+
+		});
+	</script>
+</head>
+
+<body>
+	<h1>Blockchain POC</h1>
+	<div class="col-md-4 col-md-offset-4 form-card">
+			  <div class="form-group ">
+			<form id="form" method="post">
+				<br>
+				<input type="text" name="cnumber" placeholder="Contract Number" required="" class="form-control"><br />
+				<input type="text" name="nscope" placeholder="New scope" required="" class="form-control"><br />
+				<input type="submit" value="Login" class="btn" href="/update_c">
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+//- extends layout
+//- block content
+//-     h1= title
+//-     form(name="add-estimation", method="post" ,action="updatescope.js" )
+//-     div(class="form-group")
+//-        div.input
+//-             span.label Contract-Number      
+//-             input(type="text", name="cnumber")      
+//-        br
+//-        div.input
+//-             span.label New Scope                
+//-             input(type="text", name="nscope")
+//-        br
+//-        div.actions
+//-              a.btn.btn-lg.btn-primary(href='/update_c') Submit
+

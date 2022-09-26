@@ -1,0 +1,32 @@
+{
+  "name": "fabcar-ui",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "bootstrap": "^4.6.0",
+    "connect": "^3.7.0",
+    "connect-mongo": "^4.6.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "fabric-ca-client": "^2.2.4",
+    "fabric-network": "^2.2.4",
+    "jade": "^1.11.0",
+    "mongo": "^0.1.0",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.3.0",
+    "nodemon": "^2.0.15",
+    "sqlite3": "^5.0.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
+}

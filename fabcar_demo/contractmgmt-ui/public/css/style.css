@@ -1,0 +1,59 @@
+body{
+    padding-top:50px;
+    background-color: rgb(4, 105, 97);
+}
+.main-content {
+    padding:40px 15px;
+}
+
+.navbar-dark{
+    background: rgb(7,50,98); /* Genpact Navy */
+}
+
+#top{
+    font-size: 18px;
+    color: white;
+}
+#side1:hover{
+    background-color: rgb(7,50,98); /* Genpact Navy */
+    color: rgb(0,174,207); /* Genpact Aqua */
+}
+#side2:hover{
+    background-color: rgb(7,50,98); /* Genpact Navy */
+    color: rgb(0,174,207); /* Genpact Aqua */
+}
+#side3:hover{
+    background-color: rgb(7,50,98); /* Genpact Navy */
+    color: rgb(0,174,207); /* Genpact Aqua */
+}
+#side4:hover{
+    background-color: rgb(7,50,98); /* Genpact Navy */
+    color: rgb(0,174,207); /* Genpact Aqua */
+}
+#side5:hover{
+    background-color: rgb(7,50,98); /* Genpact Navy */
+    color: rgb(0,174,207); /* Genpact Aqua */
+}
+#side6:hover{
+    background-color: rgb(7,50,98); /* Genpact Navy */
+    color: rgb(0,174,207); /* Genpact Aqua */
+}
+#side1{
+    color: white;
+}
+#side2{
+    color: white;
+}
+#side3{
+    color: white;
+}
+#side4{
+    color: white;
+}
+#side5{
+    color: white;
+}
+#side6{
+    background: white;
+    color: black;
+}

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1 Fabcar UI - Query Transaction
+    #data
+        if data != undefined && data.length > 0
+            p.lead The returned result was: #{data}
+        else
+            a.btn.btn-lg.btn-primary(href='/actionQuery') Query
+script(src='/bootstrap/js/bootstrap.bundle.js')

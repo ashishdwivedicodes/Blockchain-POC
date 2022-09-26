@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+</head>
+
+<style>
+       
+    body {
+        background-color: white;
+        padding: 0px;
+        margin: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    table {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-collapse: collapse;
+        width: 1100px;
+        border: 1px solid #bdc3c7;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    tr {
+        transition: all .2s ease-in;
+        cursor: pointer;
+    }
+    
+    th,
+    td {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    
+    #header {
+        background: rgb(7,50,98);
+        color: #fff;
+        height: 10px;
+    }
+    
+    h2 {
+        font-weight: 300;
+        text-align: left;
+        background: rgb(7,50,98);
+        color: #fff;
+        padding: 10px 10px;
+    }
+    a{
+      text-decoration: none;
+      color:black;
+    }
+    #popup1 a{
+        color: white;
+    }
+    
+    tr:hover {
+        background-color: #f5f5f5;
+        transform: scale(1.02);
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    @media only screen and (max-width: 768px) {
+        table {
+            width: 90%;
+        }
+    }
+    
+.popup {
+  text-align: center;
+  position: fixed;
+  padding: 10px;
+  width: 300ox;
+  height: 200px;
+  max-width: 500px;
+  border-radius: 0.5em;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s, visibility 0s linear .5s;
+  z-index: 1;
+}
+.popup:target {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+.popup .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 5px;
+  color: #000;
+  transition: color .3s;
+  font-size: 2em;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.popup .close:hover {
+  color: #f00;
+}
+
+.popup1 {
+  text-align: center;
+  position: fixed;
+  padding: 10px;
+  width: 300ox;
+  height: 200px;
+  max-width: 500px;
+  border-radius: 0.5em;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s, visibility 0s linear .5s;
+  z-index: 1;
+}
+.popup1:target {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+.popup1 .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 5px;
+  color: #000;
+  transition: color .3s;
+  font-size: 2em;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.popup1 .close:hover {
+  color: #f00;
+}
+#fly{
+    color: blue;
+    padding: 15px;
+    float: right;
+}
+
+#fly:hover{
+    color: #000;
+}
+</style>
+
+<body>
+    <div id="popup" class="popup">
+        <a href="#" class="close">&times;</a>
+        <br>
+        <br>
+        <h3>Admin Panel 2</h3>
+        <hr>
+        <br>
+        <a href ="/actionRegisterUser"><button>Enroll</button></a>
+        <a href ="/admin"><button>Reject</button></a>
+        
+    </div>
+        <a href="#" class="close-popup"></a>
+
+    <div id="popup1" class="popup1">
+            <a href="#" class="close">&times;</a>
+            <section class="update">
+                <h3>Update Data</h3>
+                <form action="/update" method="post">
+                    <div class="input">
+                        <label for="email">E-mail</label>
+                        <input type="text" id="email" name="email" required=""
+                        pattern="[-!#$%&'*+\/0-9=?ก-๙A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?ก-๙A-Z^_a-z`{|}~])*@[ก-๙a-zA-Z0-9](-*\.?[ก-๙a-zA-Z0-9])*\.[ก-๙a-zA-Z](-?[ก-๙a-zA-Z0-9])+$">
+                    </div>
+                    <div class="input">
+                        <label for="role">Role</label>
+                        <input type="text" id="role" name="role">
+                    </div>
+                    <button type="submit">UPDATE</button>
+                </form>
+            </section>
+            
+    </div>
+            <a href="#" class="close-popup1"></a>
+
+    <h2>Blockchain Contract Management</h2>
+
+    <table>
+      <thead>
+        <tr id="header">
+          <th scope="col">Role</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">E-mail</th>
+          <th scope="col">Password</th>
+          <th scope="col">Status</th>
+          <th scope="col">Date Added</th>
+          <th scope="col">Date Modified</th>
+        </tr>
+      </thead>
+      <tbody>
+      <%list.forEach(info => {%>
+          <tr>
+              <td><a href="#popup"><%= info.role %></a></td>
+              <td><a href="#popup"><%= info.firstname %></a></td>
+              <td><a href="#popup"><%= info.lastname %></a></td>
+              <td><a href="#popup"><%= info.email%></a></td>
+              <td><a href="#popup"><%= info.password %></a></td>
+              <td><a href="#popup"><%= info.status %></a><br><a href="#popup1">Click</a></td>
+              <td><a href="#popup"><%= info.createdAt%></a></td>
+              <td><a href="#popup"><%= info.datemod%></a></td>
+          </tr>
+      <%})%>
+        </tbody>
+
+    </table>
+    
+        <a id = "fly" href="/logout">Logout</a>
+    
+    
+</body>
+
+</html>

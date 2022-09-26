@@ -1,0 +1,37 @@
+body{
+	text-align: center !important;
+	background: rgb(7,50,98);
+}
+h1{
+	color: white;
+}
+p{
+	margin-top: 20px;
+	font-size: 30px;
+}
+input{
+	text-align: center;
+}
+#LangTable{
+    margin-bottom: 15px;
+}
+.form-card{
+    background-color: rgb(255, 85, 95);
+    border-radius: 10px;
+    margin-top: 40px;
+}
+.mssg{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+}
+.btn{
+	background-color: rgb(7,50,98);
+	color: white;
+}
+a{
+	color: rgb(7,50,98);
+}
+#mySelect{
+	text-align: center;
+}

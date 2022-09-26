@@ -1,0 +1,29 @@
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        title Fabcar-UI
+        link(rel='stylesheet' href='/css/style.css')
+        link(rel='stylesheet' href='/bootstrap/css/bootstrap.css')
+        link(rel='stylesheet' href='/bootstrap/css/navbar-top-fixed.css')
+    body
+        nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
+            .container-fluid
+                a.navbar-brand(href='/') Fabcar UI
+                button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarCollapse.collapse.navbar-collapse
+                    ul.navbar-nav.me-auto.mb-2.mb-md-0
+                        li.nav-item
+                            a.nav-link(href='/enroll') Enroll Admin
+                        li.nav-item
+                            a.nav-link(href='/register') Register User
+                        li.nav-item
+                            a.nav-link(href='/invoke') Invoke
+                        li.nav-item
+                            a.nav-link(href='/query') Query
+                        li.nav-item
+                            a.nav-link(href='/api') API
+        main.container
+            block content
+    script(src='/bootstrap/js/bootstrap.bundle.js')
